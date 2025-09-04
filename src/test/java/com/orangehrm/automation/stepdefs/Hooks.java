@@ -1,20 +1,20 @@
 package com.orangehrm.automation.stepdefs;
 
 import com.orangehrm.automation.base.BaseTest;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
+import io.cucumber.java.AfterAll;
 
-public class Hooks extends BaseTest {
+public class Hooks {
 
-    @Before
-    public void launchApplication() {
-        setUp();
+    @BeforeAll
+    public static void launchApplication() {
+        BaseTest.setUp();   // Open driver ONCE
         System.out.println("🚀 Browser launched and OrangeHRM opened");
     }
 
-    @After
-    public void closeApplication() {
-        tearDown();
+    @AfterAll
+    public static void closeApplication() {
+        BaseTest.tearDown();   // Close driver ONCE after all features
         System.out.println("🛑 Browser closed");
     }
 }

@@ -1,0 +1,8 @@
+com\orangehrm\automation\base\DriverManager.class
+com\orangehrm\automation\pages\DashboardPage.class
+com\orangehrm\automation\pages\LoginPage.class
+com\orangehrm\automation\utils\ExcelReader.class
+com\orangehrm\automation\base\BasePage.class
+com\orangehrm\automation\base\BaseTest.class
+com\orangehrm\automation\pages\Admin_UserManagementPage.class
+com\orangehrm\automation\base\ConfigReader.class

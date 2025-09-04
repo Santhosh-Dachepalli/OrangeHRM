@@ -47,4 +47,30 @@ public class LoginSteps extends BaseTest {
 	public void User_click_on_add_button() {
 		adminPage.clickCreateNewUserBtn();
 	}
+	
+	@Given("User is on user management page")
+	public void user_is_on_user_management_page() {
+	   
+	}
+
+	@When("User clicks on user role")
+	public void user_clicks_on_user_role() {
+		adminPage.clickUserRole();
+	}
+
+	@Then("User should should select an option from drop down")
+	public void user_should_should_select_an_option_from_drop_down() {
+	   adminPage.selectingUserRole("Admin");
+	}
+
+	@When("User enter text in the employee name field")
+	public void user_enter_text_in_the_employee_name_field() {
+	    adminPage.typeEmployeeName("savina dulvin dulvin");
+	}
+
+	@Then("User need to select a name from the dropdown")
+	public void user_need_to_select_a_name_from_the_dropdown() {
+	   adminPage.selectEmployeeName("savina dulvin dulvin");
+	}
+
 }

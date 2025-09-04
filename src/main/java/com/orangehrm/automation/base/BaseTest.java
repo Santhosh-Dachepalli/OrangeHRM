@@ -1,21 +1,25 @@
 package com.orangehrm.automation.base;
 
 import org.openqa.selenium.WebDriver;
+import java.time.Duration;
 
 public class BaseTest {
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
-    public void setUp() {
-        String browser = ConfigReader.get("browser");
-        driver = DriverManager.getDriver(browser);
-        driver.get(ConfigReader.get("url"));
+    public static void setUp() {
+        if (driver == null) {
+            driver = DriverManager.getDriver("chrome"); // 🔹 can later make dynamic
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.get(ConfigReader.get("url"));
+        }
     }
 
-    public void tearDown() {
+    public static void tearDown() {
         DriverManager.quitDriver();
+        driver = null;
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         return driver;
     }
 }
