@@ -10,3 +10,5 @@ Feature: OrangeHRM Workflow
     Then User should should select an option from drop down
     When User enter text in the employee name field
     Then User need to select a name from the dropdown
+    When User clicks on status
+    Then User need to select a status from the dropdown

@@ -1,219 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T18:08:43 IST" name="CucumberSuite" finished-at="2025-09-04T18:08:45 IST" duration-ms="1864">
+  <suite started-at="2025-09-06T12:48:04 IST" name="OrangeHRM Suite" finished-at="2025-09-06T12:49:47 IST" duration-ms="102622">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@303cf2ba]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@5e7cd6cc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@792b749c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-04T18:08:43 IST" name="OrangeHRM Workflow" finished-at="2025-09-04T18:08:45 IST" duration-ms="1686">
+    <test started-at="2025-09-06T12:48:04 IST" name="Cucumber Tests" finished-at="2025-09-06T12:49:47 IST" duration-ms="102622">
       <class name="com.orangehrm.automation.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@303cf2ba]" started-at="2025-09-04T18:08:43 IST" name="setUpClass" finished-at="2025-09-04T18:08:45 IST" duration-ms="1567" status="FAIL">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@792b749c]" started-at="2025-09-06T12:48:04 IST" name="setUpClass" finished-at="2025-09-06T12:49:08 IST" duration-ms="63770" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@200a26bc]]>
+                <![CDATA[org.testng.TestRunner@2ca54da9]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.java.InvalidMethodSignatureException">
-            <message>
-              <![CDATA[A method annotated with BeforeAll or AfterAll must have one of these signatures:
- * public static void before_or_after_all()
-at com.orangehrm.automation.stepdefs.Hooks.launchApplication()
-
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.InvalidMethodSignatureException: A method annotated with BeforeAll or AfterAll must have one of these signatures:
- * public static void before_or_after_all()
-at com.orangehrm.automation.stepdefs.Hooks.launchApplication()
-
-
-at io.cucumber.java.InvalidMethodSignatureException$InvalidMethodSignatureExceptionBuilder.build(InvalidMethodSignatureException.java:52)
-at io.cucumber.java.JavaStaticHookDefinition.createInvalidSignatureException(JavaStaticHookDefinition.java:44)
-at io.cucumber.java.JavaStaticHookDefinition.requireValidMethod(JavaStaticHookDefinition.java:28)
-at io.cucumber.java.JavaStaticHookDefinition.<init>(JavaStaticHookDefinition.java:17)
-at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:30)
-at io.cucumber.java.JavaBackend.lambda$loadGlue$1(JavaBackend.java:43)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:78)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:69)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:33)
-at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:41)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:175)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
-at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:41)
-at io.cucumber.core.runner.Runner.<init>(Runner.java:56)
-at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:47)
-at java.base/java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(ThreadLocal.java:305)
-at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:35)
-at io.cucumber.core.runtime.CucumberExecutionContext.getRunner(CucumberExecutionContext.java:140)
-at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:92)
-at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:124)
-at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.InvalidMethodSignatureException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.orangehrm.automation.runners.TestRunner@303cf2ba]" started-at="2025-09-04T18:08:45 IST" name="tearDownClass" finished-at="2025-09-04T18:08:45 IST" duration-ms="1" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@792b749c]" started-at="2025-09-06T12:49:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-06T12:49:40 IST" duration-ms="31784" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login and Add User"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OrangeHRM Workflow"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.orangehrm.automation.runners.TestRunner@792b749c]" started-at="2025-09-06T12:49:40 IST" name="tearDownClass" finished-at="2025-09-06T12:49:47 IST" duration-ms="6917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.orangehrm.automation.runners.TestRunner -->
-    </test> <!-- OrangeHRM Workflow -->
-    <test started-at="2025-09-04T18:08:45 IST" name="Add User Workflow" finished-at="2025-09-04T18:08:45 IST" duration-ms="55">
-      <class name="com.orangehrm.automation.runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.orangehrm.automation.runners.TestRunner@5e7cd6cc]" started-at="2025-09-04T18:08:45 IST" name="setUpClass" finished-at="2025-09-04T18:08:45 IST" duration-ms="46" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@ec2bf82]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.java.InvalidMethodSignatureException">
-            <message>
-              <![CDATA[A method annotated with BeforeAll or AfterAll must have one of these signatures:
- * public static void before_or_after_all()
-at com.orangehrm.automation.stepdefs.Hooks.launchApplication()
-
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.InvalidMethodSignatureException: A method annotated with BeforeAll or AfterAll must have one of these signatures:
- * public static void before_or_after_all()
-at com.orangehrm.automation.stepdefs.Hooks.launchApplication()
-
-
-at io.cucumber.java.InvalidMethodSignatureException$InvalidMethodSignatureExceptionBuilder.build(InvalidMethodSignatureException.java:52)
-at io.cucumber.java.JavaStaticHookDefinition.createInvalidSignatureException(JavaStaticHookDefinition.java:44)
-at io.cucumber.java.JavaStaticHookDefinition.requireValidMethod(JavaStaticHookDefinition.java:28)
-at io.cucumber.java.JavaStaticHookDefinition.<init>(JavaStaticHookDefinition.java:17)
-at io.cucumber.java.GlueAdaptor.addDefinition(GlueAdaptor.java:30)
-at io.cucumber.java.JavaBackend.lambda$loadGlue$1(JavaBackend.java:43)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:78)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:69)
-at io.cucumber.java.MethodScanner.scan(MethodScanner.java:33)
-at io.cucumber.java.JavaBackend.lambda$loadGlue$2(JavaBackend.java:41)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.DistinctOps$1$2.accept(DistinctOps.java:175)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
-at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:274)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
-at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
-at io.cucumber.java.JavaBackend.loadGlue(JavaBackend.java:41)
-at io.cucumber.core.runner.Runner.<init>(Runner.java:56)
-at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:47)
-at java.base/java.lang.ThreadLocal$SuppliedThreadLocal.initialValue(ThreadLocal.java:305)
-at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-at io.cucumber.core.runtime.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:35)
-at io.cucumber.core.runtime.CucumberExecutionContext.getRunner(CucumberExecutionContext.java:140)
-at io.cucumber.core.runtime.CucumberExecutionContext.runBeforeAllHooks(CucumberExecutionContext.java:92)
-at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:124)
-at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.InvalidMethodSignatureException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.orangehrm.automation.runners.TestRunner@5e7cd6cc]" started-at="2025-09-04T18:08:45 IST" name="tearDownClass" finished-at="2025-09-04T18:08:45 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.orangehrm.automation.runners.TestRunner -->
-    </test> <!-- Add User Workflow -->
-  </suite> <!-- CucumberSuite -->
+    </test> <!-- Cucumber Tests -->
+  </suite> <!-- OrangeHRM Suite -->
 </testng-results>

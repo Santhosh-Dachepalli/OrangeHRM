@@ -32,7 +32,7 @@ public class Admin_UserManagementPage extends BasePage {
 
 	@FindBy(xpath = "//label[text()='User Role']//parent::div/parent::div//following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']")
 	private WebElement userRole;
-	
+
 	@FindBy(xpath = "//div[@class='oxd-select-wrapper']/div[@role='listbox']/div/span")
 	private List<WebElement> roles;
 
@@ -41,6 +41,12 @@ public class Admin_UserManagementPage extends BasePage {
 
 	@FindBy(xpath = "//div[@class='oxd-autocomplete-wrapper']/div[@role='listbox']/div/span")
 	private List<WebElement> names;
+
+	@FindBy(xpath = "//label[text()='Status']//parent::div/parent::div//following-sibling::div//div[@class='oxd-select-text oxd-select-text--active']")
+	private WebElement status;
+
+	@FindBy(xpath = "//div[@class='oxd-select-wrapper']/div[@role='listbox']/div/span")
+	private List<WebElement> statusSelect;
 
 	public void selectItem(String item) {
 		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfAllElements(menu));
@@ -56,34 +62,48 @@ public class Admin_UserManagementPage extends BasePage {
 		BasePage.isDisplayed(addBtn);
 		BasePage.click(addBtn);
 	}
-	
-	 public void clickUserRole() {
-	        BasePage.click(userRole);
-	    }
 
-	    public void selectingUserRole(String roleName) {
-	        new WebDriverWait(driver, Duration.ofSeconds(10))
-	                .until(ExpectedConditions.visibilityOfAllElements(roles));
-	        for (WebElement role : roles) {
-	            if (role.getText().equalsIgnoreCase(roleName)) {
-	                role.click();
-	                break;
-	            }
-	        }
-	    }
+	public void clickUserRole() {
+		BasePage.click(userRole);
+	}
 
-	    public void typeEmployeeName(String inputName) {
-	        employeeName.clear();
-	        employeeName.sendKeys(inputName);
-	    }
+	public void selectingUserRole(String roleName) {
+		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfAllElements(roles));
+		for (WebElement role : roles) {
+			if (role.getText().equalsIgnoreCase(roleName)) {
+				role.click();
+				break;
+			}
+		}
+	}
 
-	    public void selectEmployeeName(String expectedName) {
-	        new WebDriverWait(driver, Duration.ofSeconds(10))
-	                .until(ExpectedConditions.visibilityOfAllElements(employeeName));
-	        for (WebElement option : names) {
-	            if (option.getText().equalsIgnoreCase(expectedName)) {
-	                option.click();
-	                break;
-	            }
-	        }
-	    }}
+	public void typeEmployeeName(String inputName) {
+		employeeName.clear();
+		employeeName.sendKeys(inputName);
+	}
+
+	public void selectEmployeeName(String expectedName) {
+		new WebDriverWait(driver, Duration.ofSeconds(10))
+				.until(ExpectedConditions.visibilityOfAllElements(employeeName));
+		for (WebElement option : names) {
+			if (option.getText().equalsIgnoreCase(expectedName)) {
+				option.click();
+				break;
+			}
+		}
+	}
+
+	public void clickStatus() {
+		status.click();
+	}
+
+	public void selectStatus(String expectedStatus) {
+		for (WebElement selectStatus : statusSelect) {
+			if (selectStatus.getText().equals(expectedStatus)) {
+				selectStatus.click();
+				break;
+			}
+		}
+
+	}
+}

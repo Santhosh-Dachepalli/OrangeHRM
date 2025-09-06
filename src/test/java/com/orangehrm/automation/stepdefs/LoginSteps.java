@@ -72,5 +72,14 @@ public class LoginSteps extends BaseTest {
 	public void user_need_to_select_a_name_from_the_dropdown() {
 	   adminPage.selectEmployeeName("savina dulvin dulvin");
 	}
-
+	
+	@When("User clicks on status")
+	public void User_clicks_on_status() {
+		adminPage.clickStatus();
+	}
+	
+	@Then("User need to select a status from the dropdown")//User should select an status from drop down
+	public void user_need_to_select_a_status_from_the_dropdown() {
+		adminPage.selectStatus("Disabled");
+	}
 }
